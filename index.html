@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Tracker</title>
+    <script src="https://kit.fontawesome.com/1a13acd81a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="toggle"><strong>&#9776;</strong></button>
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">Impact</div>
+                    <button class="close-btn">&#10006</button>
+                </div>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </aside>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#activity">Activity</a></li>
+                <li><a href="#send_request">Send/Request</a></li>
+            </ul>
+        </nav>
+        <section class="header-content">
+            <h2>YOUR BALANCE</h2>
+            <h1>$200.54</h1>
+        </section>
+    </header>
+    <section class="main-section">
+        <div class="tabs">
+            <h3 class="tab pending active" onclick="switchTab('pending')">PENDING</h3>
+            <h3 class="tab completed" onclick="switchTab('completed')">COMPLETED</h3>
+        </div>
+        <div class="tab-content">
+            <div id="pending-content" class="content">
+                <div class="groups">
+                    <div class="group group1">
+                        <h4>Company Inc.</h4>
+                        <p>Payment request for 335.89 CAD sent.</p>
+                        <br>
+                        <span>Company Inc hasn't paid yet</span>
+                        <details class="details">
+                            <button class="reminder">Send a reminder</button>
+                            <button class="edit">Edit amount</button>
+                            <button type="reset" class="cancel">Cancel</button>
+                        </details>
+                    </div>
+                    <div class="group group2">
+                        <h4>Organization LLC</h4>
+                        <p>Payment request for 985.00 USD sent.</p>
+                        <br>
+                        <span>Organization LLC hasn't paid yet</span>
+                        <details class="details">
+                            <button class="reminder">Send a reminder</button>
+                            <button class="edit">Edit amount</button>
+                            <button type="reset" class="cancel">Cancel</button>
+                        </details>
+                    </div>
+                    <div class="group group3">
+                        <h4>Corporate Org.</h4>
+                        <p>Payment request for 500.35 GBP sent.</p>
+                        <br>
+                        <span>Corporate Org hasn't paid yet</span>
+                        <details class="details">
+                            <button class="reminder">Send a reminder</button>
+                            <button class="edit">Edit amount</button>
+                            <button type="reset" class="cancel">Cancel</button>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div id="completed-content" class="content hidden">
+                <div class="groups">
+                    <div class="group group1">
+                        <h4>Company Inc.</h4>
+                        <p>354 CAD fully paid for January</p>
+                        <a href="#" class="history">See full payment history</a>
+                    </div>
+                    <div class="group group2">
+                        <h4>Organization LLC</h4>
+                        <p>498.97 USD fully paid for June</p>
+                        <a href="#" class="history">See full payment history</a>
+                    </div>
+                    <div class="group group3">
+                        <h4>Corporate Org.</h4>
+                        <p>409.23 GBP fully paid for September</p>
+                        <a href="#" class="history">See full payment history</a>
+                    </div>
+                </div>
+                <div class="circle circle1"></div>
+                <div class="circle circle2"></div>
+                <div class="circle circle3"></div>
+                <div class="circle circle4"></div>
+            </div>
+        </div>    
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
